@@ -1,7 +1,26 @@
 import Navbar from './Navbar';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Home() {
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const carouselItems = [
+    { type: 'video', src: '/videos/surf-or-sound-hero.mp4' },
+    { type: 'image', src: '/photos/bonsai-home-hero.png', alt: 'Bonsai Home Hero' },
+    { type: 'image', src: '/photos/surf-boards.png', alt: 'Surf Boards' },
+  ];
+
+  const handlePrevious = () => {
+    setCarouselIndex((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCarouselIndex((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1));
+  };
+
+  const currentItem = carouselItems[carouselIndex];
+
   return (
     <>
       <div className="dark-section">
@@ -14,8 +33,8 @@ export default function Home() {
         <section className="showcase">
           <div className="showcase-header">
             <div className="showcase-controls">
-              <button className="control-btn"><ArrowLeft size={20} /></button>
-              <button className="control-btn"><ArrowRight size={20} /></button>
+              <button className="control-btn" onClick={handlePrevious}><ArrowLeft size={20} /></button>
+              <button className="control-btn" onClick={handleNext}><ArrowRight size={20} /></button>
             </div>
             <div className="brand-info">
               <div className="brand-title">GEN</div>
@@ -24,13 +43,21 @@ export default function Home() {
           </div>
           
           <div className="project-image">
-            <video 
-              src="/videos/surf-or-sound-hero.mp4"
-              autoPlay
-              loop
-              muted
-              className="project-video"
-            />
+            {currentItem.type === 'video' ? (
+              <video 
+                src={currentItem.src}
+                autoPlay
+                loop
+                muted
+                className="project-video"
+              />
+            ) : (
+              <img 
+                src={currentItem.src}
+                alt={currentItem.alt}
+                className="project-video"
+              />
+            )}
           </div>
         </section>
       </div>

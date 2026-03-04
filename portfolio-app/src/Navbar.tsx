@@ -33,7 +33,7 @@ export default function Navbar() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/work">Works</a>
+          <a href=''>Works</a>
           <div className={`dropdown-menu ${showDropdown ? 'visible' : ''}`}>
             <a href="/surf-or-sound">Surf or Sound</a>
             <a href="/living-bonsai">Living Bonsai</a>

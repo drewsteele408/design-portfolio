@@ -13,7 +13,21 @@ export default function LivingBonsai() {
 
       <section className="desc-section">
         <div className="desc-hero">
-          <h2>Living Bonsai project details coming soon.</h2>
+          <div className="project-photos-equal">
+            <div className="project-photo">
+              <img 
+                src="/photos/bonsai-home.png"
+                alt="Bonsai Home"
+              />
+            </div>
+
+            <div className="project-photo">
+              <img 
+                src="/photos/bonsai-styles.png"
+                alt="Bonsai Styles"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>

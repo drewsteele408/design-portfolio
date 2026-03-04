@@ -13,7 +13,21 @@ export default function Designs() {
 
       <section className="desc-section">
         <div className="desc-hero">
-          <h2>Design collection coming soon.</h2>
+          <div className="project-photos-equal">
+            <div className="project-photo">
+              <img 
+                src="/photos/guitar-poster.png"
+                alt="Guitar Poster"
+              />
+            </div>
+
+            <div className="project-photo">
+              <img 
+                src="/photos/surf-boards.png"
+                alt="Surf Boards"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
