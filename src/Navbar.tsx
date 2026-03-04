@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -46,20 +47,20 @@ export default function Navbar() {
             ✕
           </button>
         )}
-        <li><a href="/" onClick={closeMobileMenu}>Home</a></li>
+        <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
         <li 
           className="nav-item-with-dropdown"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a href=''>Works</a>
+          <span>Works</span>
           <div className={`dropdown-menu ${showDropdown ? 'visible' : ''}`}>
-            <a href="/surf-or-sound" onClick={closeMobileMenu}>Surf or Sound</a>
-            <a href="/living-bonsai" onClick={closeMobileMenu}>Living Bonsai</a>
-            <a href="/designs" onClick={closeMobileMenu}>Designs</a>
+            <Link to="/surf-or-sound" onClick={closeMobileMenu}>Surf or Sound</Link>
+            <Link to="/living-bonsai" onClick={closeMobileMenu}>Living Bonsai</Link>
+            <Link to="/designs" onClick={closeMobileMenu}>Designs</Link>
           </div>
         </li>
-        <li><a href="/contact" onClick={closeMobileMenu}>Contact</a></li>
+        <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
       </ul>
     </nav>
   );
