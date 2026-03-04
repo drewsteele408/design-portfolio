@@ -34,7 +34,7 @@ export default function Home() {
 
       <section className="desc-section">
         <div className="desc-hero">
-          <h2>THOUTFUL DESIGN FOR THE DIGITAL WORLD</h2>
+          <h2>THOUGHTFUL DESIGN FOR THE DIGITAL WORLD</h2>
         </div>
         
         <div className="desc-columns">
