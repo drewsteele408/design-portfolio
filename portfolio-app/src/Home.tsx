@@ -24,9 +24,12 @@ export default function Home() {
           </div>
           
           <div className="project-image">
-            <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400" 
-              alt="Engineering Global Prosperity" 
+            <video 
+              src="/videos/surf-or-sound-hero.mp4"
+              autoPlay
+              loop
+              muted
+              className="project-video"
             />
           </div>
         </section>
@@ -39,11 +42,28 @@ export default function Home() {
         
         <div className="desc-columns">
           <div className="desc-column">
-            <p>At Reino Studio, we blend technology and art to create innovative designs that open up new possibilities. We understand that sensitivity and technique go hand in hand, working together to benefit your company and customers.</p>
+            <p>At Regno Studio, we blend technology and art to create innovative designs that open up new possibilities. We understand that sensitivity and technique go hand in hand, working together to benefit your company and customers.</p>
             <p>Specializing in digital platforms, we also work across various mediums. From planning to development, we cover everything from visual identities to interactive installations.</p>
+            
+            <div className="guitar-image-section">
+              <img 
+                src="/photos/guitar-poster.png"
+                alt="Guitar Poster"
+              />
+            </div>
+
+            <div className="email-image-section">
+              <img 
+                src="/photos/Email-Desktop-Finished-Small.png"
+                alt="Email Desktop"
+              />
+            </div>
           </div>
-          <div className="desc-column">
-            <p>Our owners are actively involved throughout the design process, ensuring a passionate and results-driven experience. With our dedicated customer service, close collaboration, and streamlined process, we make things simple and efficient, without unnecessary bureaucracy.</p>
+          <div className="desc-column bonsai-column">
+            <img 
+              src="/photos/bonsai-home.png"
+              alt="Bonsai"
+            />
           </div>
         </div>
       </section>
