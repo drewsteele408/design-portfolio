@@ -11,6 +11,13 @@ export default function Designs() {
         </header>
       </div>
 
+      <div className='designs-header'>
+        <h1>Minimalist Brand Advertising</h1>
+        <p>
+          This project explores minimalist ad design through brand-focused visuals and restrained typography. Featuring concept ads for Fender and Billabong, each piece relies on strong imagery, a concise slogan, and subtle branding to communicate identity without excess—letting the product and lifestyle speak for themselves.
+        </p>
+      </div>
+
       <section className="desc-section">
         <div className="desc-hero">
           <div className="project-photos-equal">

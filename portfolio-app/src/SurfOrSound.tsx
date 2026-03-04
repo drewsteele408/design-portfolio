@@ -10,7 +10,12 @@ export default function SurfOrSound() {
           <h1>Surf or Sound</h1>
         </header>
       </div>
-
+      <div className='surf-or-sound-header'>
+        <h1>Surf or Sound Website Redesign</h1>
+        <p>
+          This project reimagines the digital experience for Surf or Sound Realty, a vacation rental company based on Hatteras Island in the Outer Banks. The redesign includes a refreshed homepage hero, a modernized property search experience, and a promotional marketing email—each crafted to highlight the coastal lifestyle while making it easier for users to explore and book their ideal vacation home.
+        </p>
+      </div>
       <section className="desc-section">
         <div className="desc-hero">
           <video 

@@ -11,6 +11,13 @@ export default function LivingBonsai() {
         </header>
       </div>
 
+       <div className='living-bonsai-header'>
+        <h1>Living Bonsai Blog Design</h1>
+        <p>
+          Living Bonsai is a conceptual blog design that explores the beauty, philosophy, and craftsmanship behind bonsai trees. The project includes a blog home page featuring curated trees, an introduction to the art of bonsai, and an overview of different bonsai styles—designed with a calm, modern aesthetic that reflects the patience and intention at the heart of bonsai practice.
+        </p>
+      </div>
+
       <section className="desc-section">
         <div className="desc-hero">
           <div className="project-photos-equal">

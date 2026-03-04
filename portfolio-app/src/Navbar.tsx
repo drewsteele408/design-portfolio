@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
-  let hideTimeout: NodeJS.Timeout;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  let hideTimeout: ReturnType<typeof setTimeout> | undefined;
 
   const handleMouseEnter = () => {
     if (hideTimeout) {
@@ -17,6 +18,14 @@ export default function Navbar() {
     }, 300);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -26,8 +35,18 @@ export default function Navbar() {
           </svg>
         </span>
       </div>
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
+      <button className="hamburger" onClick={toggleMobileMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+        {isMobileMenuOpen && (
+          <button className="close-btn" onClick={closeMobileMenu}>
+            ✕
+          </button>
+        )}
+        <li><a href="/" onClick={closeMobileMenu}>Home</a></li>
         <li 
           className="nav-item-with-dropdown"
           onMouseEnter={handleMouseEnter}
@@ -35,12 +54,12 @@ export default function Navbar() {
         >
           <a href=''>Works</a>
           <div className={`dropdown-menu ${showDropdown ? 'visible' : ''}`}>
-            <a href="/surf-or-sound">Surf or Sound</a>
-            <a href="/living-bonsai">Living Bonsai</a>
-            <a href="/designs">Designs</a>
+            <a href="/surf-or-sound" onClick={closeMobileMenu}>Surf or Sound</a>
+            <a href="/living-bonsai" onClick={closeMobileMenu}>Living Bonsai</a>
+            <a href="/designs" onClick={closeMobileMenu}>Designs</a>
           </div>
         </li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact" onClick={closeMobileMenu}>Contact</a></li>
       </ul>
     </nav>
   );

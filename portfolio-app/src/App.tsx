@@ -4,6 +4,7 @@ import Work from './Work';
 import SurfOrSound from './SurfOrSound';
 import LivingBonsai from './LivingBonsai';
 import Designs from './Designs';
+import Contact from './Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/surf-or-sound" element={<SurfOrSound />} />
       <Route path="/living-bonsai" element={<LivingBonsai />} />
       <Route path="/designs" element={<Designs />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
